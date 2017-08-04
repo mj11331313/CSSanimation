@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS动画</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #cartoon{
+            width: 200px;
+            height: 200px;
+            background: #af9218;
+            margin: 100px auto;
+        }
+        #cartoon:hover{
+            animation-duration: 1s; /*动画持续时间*/
+            animation-delay: 200ms;  /*动画延迟时间*/
+            animation-iteration-count: infinite; /*动画执行次数，infinite表示无数次,也可以写数字*/
+            animation-name: first;
+            animation-direction: alternate; /*动画正反方向交替执行，即改变后再变回原样，然后再改变，一直循环*/
+        }
+        @keyframes first {
+            from{
+                width: 250px;
+                height: 250px;
+                background: cornflowerblue;
+            }   /*动画开始时的样式*/
+            50%{
+                width: 500px;
+                background: dodgerblue;
+            }  /*动画执行到50%时的样式*/
+            75%{
+                height: 800px;
+                background: blue;
+            }  /*动画执行到75%时的样式*/
+            to{
+                width: 400px;
+                height: 400px;
+                background: black;
+            }  /*动画结束时的样式*/
+        }
+    </style>
+</head>
+<body>
+    <div id="cartoon"></div>
+</body>
+</html>
